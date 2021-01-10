@@ -1,0 +1,113 @@
+{% assign hi-06_theme = '' %}
+{% case section.settings.hi-06_theme %}
+{% when 'default' %}
+{% assign hi-06_theme = '' %}
+{% when 'color' %}
+{% assign hi-06_theme = 'hi-feature--color' %}
+{% endcase %}
+
+<div class="hi-06-content {{hi-06_theme}}">
+    <div class="hi-06-slides">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                <div class="swiper-slide"
+                    style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url({{block.settings.hi-06__img | img_url: 'master'}}); background-size: cover;">
+                    <div class="hi-06__text">
+                        <div class="hi-06__name">{{ block.settings.hi-06__name }}</div>
+                        <div class="hi-06__time">{{ block.settings.hi-06__time }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="hi-06__main">
+        <div class="hi-06__header">{{section.settings.hi-06_header }}</div>
+        <div class="hi-06__desc">{{section.settings.hi-06_desc }}</div>
+        <div class="hi__btn">
+            <a href="#" class="hi-btn hi__btn--primary">EXPLORE</a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "hi-feature-06",
+    
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "type": "select",
+            "id": "vertical_alignment",
+            "options": [
+               { "value": "top", "label": "Top"},
+               { "value": "middle", "label": "Middle"},
+               { "value": "bottom", "label": "Bottom"}
+            ],
+            "label": "Vertical alignment"
+         },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        },
+        {
+            "type": "radio",
+            "id": "hi-06_theme",
+            "label": "Color",
+            "options": [
+                {
+                    "value": "default",
+                    "label": "Default"
+                },
+                {
+                    "value": "color",
+                    "label": "Color"
+                }
+            ],
+            "default": "default"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "hi-feature-06",
+            "settings": [
+                {
+                    "id": "hi-06__name",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "This is name"
+                },
+                {
+                    "id": "hi-06__time",
+                    "type": "text",
+                    "label": "Time",
+                    "default": "20/08/1999"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-06__img",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "hi-feature 06"
+        }
+    ]
+}
+{% endschema %}

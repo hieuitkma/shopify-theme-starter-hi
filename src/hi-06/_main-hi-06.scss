@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hi-06-container {
+    border-top: 1px solid #333;
+}
+
+.hi-06-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    padding: 100px 0;
+}
+
+.hi-06-slides {
+    width: 50%;
+    height: 25vw;
+}
+
+.hi-06-content .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.hi-06-content .swiper-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.hi-06-content .swiper-slide {
+    transform-origin: left;
+    object-fit: cover;
+    max-height: 90%;
+
+    position: relative;
+
+    transition: all 0.4s linear;
+}
+
+.hi-06-content .swiper-slide-next {
+    transform: scale(1.2);
+}
+
+.hi-06__text {
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    transform: translate(50%);
+
+    color: white;
+}
+
+.hi-06__main {
+    width: 50%;
+    padding: 0 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hi-06__header{
+    color: #3d4246;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.hi-06__desc {
+    margin-top: 10px;
+    color: #69727b;
+}
+
+.hi__btn {
+    margin-top: 50px;
+}
+
+.hi-btn {
+    margin: 0 auto;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+}
+
+.hi__btn--primary {
+    background-image: linear-gradient(120deg, #25aae1 0%, #40e495 40%, #30dd8a 60%, #0fc369 120%);
+    
+    background-size: 300% 100%;
+    transition: all .2s linear;
+}
+
+.hi__btn--primary:hover {
+    background-image: linear-gradient(120deg, #57e29f 0%, #57e29f 40%, #47d68f 60%, #47d68f 120%);
+        background-size: 100% 300%;
+        transition: all .2s linear;
+        color: white;
+}
+
+.hi-06-content.hi-feature--color {
+    background-image: url(https://cdn.shopify.com/s/files/1/0335/3526/2856/t/1/assets/1591863412208.jpg?v=1055100531130285617);
+    flex-direction: row-reverse;
+}
+
+.hi-feature--color .hi-06__header,
+.hi-feature--color .hi-06__desc {
+    color: white;
+}
+
+.hi__btn {
+    margin-top: 50px;
+}
+
+.hi-btn {
+    margin: 0 auto;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+}
+
+.hi__btn--primary {
+    background-image: linear-gradient(120deg, #25aae1 0%, #40e495 40%, #30dd8a 60%, #0fc369 120%);
+    
+    background-size: 300% 100%;
+    transition: all .2s linear;
+    &:hover {
+        background-image: linear-gradient(120deg, #57e29f 0%, #57e29f 40%, #47d68f 60%, #47d68f 120%);
+        background-size: 100% 300%;
+        transition: all .2s linear;
+        color: white;
+    }
+}
+
+
+// .hi-06-content-bottom {
+//     margin-top: 100px;
+//     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.shopify.com/s/files/1/0335/3526/2856/t/1/assets/1591863412208.jpg?v=1055100531130285617);
+// }
+
+// .hi-06-content--reverse.hi-06-content {
+//     flex-direction: row-reverse;
+// }
+
+// .hi-06-content--reverse .hi-06__header ,
+// .hi-06-content--reverse .hi-06__desc {
+//     color: white;
+// };
+
+@media only screen and (max-width: 999px) {
+    .hi-06-slides {
+        height: 46vh;
+    }
+
+    .swiper-slide.swiper-slide-active {
+        transform: scaleY(1.1);
+        object-fit: cover;
+    }
+
+    .hi-06-content .swiper-slide-next {
+        transform: scale(0.9);
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    .hi-06-content {
+        flex-direction: column;
+    }
+
+    .hi-06-slides,
+    .hi-06__main {
+        width: 100%;
+    }
+
+    .hi-06-slides {
+        margin: 0 auto 100px auto;
+        width: 82%;
+        height: 65vh;
+    }
+
+    .hi-06-content .swiper-slide  {
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .hi-06-slides {
+        width: 96%;
+        height: 80vh;
+    }
+
+    .hi-06-content .swiper-slide  {
+        transform: translateX(0);
+    }
+}

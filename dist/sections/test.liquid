@@ -1,0 +1,95 @@
+{% assign hi_09-themeBg = '' %}
+{% case section.settings.hi_09_radio %} 
+  {% when 'white' %}
+    {% assign hi_09-themeBg = '' %}
+  {% when 'blue' %}
+    {% assign hi_09-themeBg = 'hi-09-feature--blue' %}
+{% endcase %}
+
+
+<div class="hi-09-container">
+    <div class="hi-09-topbar">
+        <div class="hi-09-topbar__text">{{section.settings.hi-09_topbar}}</div>
+    </div>
+    <div class="hi-09-featute {{hi_09-themeBg}}">
+        <div class="hi-09__header">{{section.settings.hi-09_header}}</div>
+        <div class="hi-09__content">
+            <ul class="hi-09__list">
+                {% for item in section.blocks %}
+                    <li class="hi-09__item">
+                        <img class="hi-09__img" src="{{ item.settings.hi-09__img | img_url }}" alt="">
+                        <div class="hi-09__title">{{ item.settings.hi-09__title }}</div>
+                        <div class="hi-09__desc">{{ item.settings.hi-09__desc }}</div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "hi-09",
+    "settings": [  
+        {
+            "type": "radio",
+            "id": "hi_09_radio",
+            "label": "Choose background",
+            "default": "white",
+            "options": [
+                {
+                    "value": "white",
+                    "label": "White"
+                },
+                {
+                    "value": "blue",
+                    "label": "Blue"
+                }
+            ]
+        },
+        {
+            "id": "hi-09_topbar",
+            "type": "text",
+            "label": "Top bar",
+            "default": "FATURE ..."
+        },
+        {
+            "id": "hi-09_header",
+            "type": "text",
+            "label": "Header",
+            "default": "CREATE HIGH QUALITY PRODUCTS"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "Add item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-09__img",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-09__title",
+                    "type": "text",
+                    "label": "Title",
+                    "default": "This is title"
+                },
+                {
+                    "id": "hi-09__desc",
+                    "type": "text",
+                    "label": "Desc",
+                    "default": "This is desc"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name":"hi-feature-09"
+        }
+    ]
+}
+{% endschema %}
