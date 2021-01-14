@@ -3,11 +3,15 @@
 /// Thiếu structure gì cứ tự bổ sung
 
 /// Base
+@import './base/variable';
+@import './base/mixin';
+
 @import './base/reset';
 @import './base/typography';
 
 /// Components
 @import './components/buttons';
+@import './components/carousel';
 
 /// Layout
 @import './layout/bs-grid';
@@ -27,3 +31,18 @@
 
 @import '../hi-06/main-hi-06';
 @import '../hi-09/main-hi-09';
+
+@import './general';
+
+@import './sections/sliders/sliders';
+
+@import './layout/header';
+@import './layout/content';
+@import './layout/footer';
+
+
+
+
+
+@import './views/tablet';
+@import './views/mobile';

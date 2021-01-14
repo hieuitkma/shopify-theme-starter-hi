@@ -1,0 +1,61 @@
+<div class="section-leather">
+    <div class="section-leather-box">
+        <div class="section-leather-box__header">LEATHER</div>
+        <div class="section-leather-box__desc">We only work with the best leather, chosen in collaboration with
+            our factory. Made in Italy.</div>
+        <div class="section__btn-secondary">
+            <a href="#">Discover our Leather</a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "feature-leather",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "feature-leather"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,172 @@
+@media screen and (max-width: 1200px) {
+    //bloG posts
+    .section-blog .section-feature-collection {
+        padding: 50px;
+    }
+
+    .section-blog-content {
+        max-width: 1100px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .section-blog-box {
+        width: 46%;   
+        height: 100%;
+        &:not(:last-child) {
+            margin: 0 30px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    // header
+    .nav {
+        margin: 0 30px;
+    }
+
+    .nav-left__list,
+    .nav-right__list {
+        display: none;
+    }
+
+    .nav__icon {
+        display: block;
+        height: 100%;
+    }
+
+    .slide--box {
+        left: 30px;
+    }
+
+    // 2
+    // .section-collection-list {
+    //     height: 500px;
+    // }
+
+    //3 
+    // .section-new-color.section__main {
+    //     padding: 80px 0;
+    // }
+
+    // 4 
+    // .section-collection-list-box {
+    //     bottom: 60px;
+    // }
+
+    // 5
+    // .section-stock.section__main {
+    //     padding: 80px 0;
+    // }
+
+    // .product__text .product__title {
+    //     line-height: 1.6;
+    // }
+
+    //6
+    // .section-timeline-container {
+    //     margin: 80px 50px;
+    // }
+
+    // .section-years {
+    //     margin-top: 40px ;
+    // }
+
+    // 7 
+    // .section-shop.section__main {
+    //     padding: 50px;
+    // }
+
+    // .section-shop .swiper-container {    
+    //     max-width: 900px;
+    // }
+
+    
+    // .section-shop .swiper-button-next,
+    // .section-shop .swiper-button-prev {
+    //     display: none;
+    // }
+
+    // .shop-inner {
+    //     width: 100%;
+    //     margin: 0 auto;
+    // }
+
+    // .shop-box-right {
+    //     display: none;
+    // }
+
+    // .section-shop .swiper-slide{
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     padding: 0;
+    // }
+
+    // .section-shop .swiper-slide {
+    //     width: 75%;
+    // }
+
+    // .section-shop__btn {
+    //     display: inherit;
+    //     margin-top: 40px;
+    //  }   
+
+    // 8
+    // .section-blog.section__main {
+    //     padding: 80px 50px;
+    // }
+
+    // .section-blog__img {
+    //     max-height: 40%;
+    // }
+
+    // .section-blog-box {
+    //     width: 46%;   
+    //     height: 100%;
+    //     &:not(:last-child) {
+    //         margin: 0 30px 0 0;
+    //     }
+    // }
+
+    // .section-blog__text {
+    //     margin: 40px 20px 20px 0;
+    // }
+    
+
+    // 10 
+    // .section-leather {
+    //     height: 500px;
+    // }
+
+    // 12 
+    // .section-brand-intro {
+    //     height: 500px;
+    // }
+
+    // footer
+    .main-footer {
+        padding: 50px 50px 50px 50px;
+    }
+    
+    .footer-top-style {
+        flex: 0 1 50%;
+        padding: 0;
+    }
+
+    .footer-intro {
+        flex-basis: 10%;
+        flex-grow: 1;
+    }
+
+    .footer__desc {
+        width: 100%;
+    }
+
+    .footer-news {
+        width: 46%;
+    }
+    
+    .footer-news input {
+        max-width: 80%;
+    }
+}

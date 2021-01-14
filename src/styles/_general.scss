@@ -1,2 +1,23 @@
 /// File này viết CSS chung...
 /// Những cái cụ thể khác viết trong những folder còn lại
+
+.section__main {
+    padding: 80px;
+}
+
+.section__text {
+    margin-bottom: 80px;
+}
+
+.section__header {
+    text-align: center;
+    margin-bottom: 16px;
+
+    @include sectiondesc;
+}
+
+.section__title {
+    text-align: center;
+
+    @include sectionTitle;
+}

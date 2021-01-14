@@ -1,0 +1,144 @@
+//section-timeline 
+.section-timeline {
+    width: 100%;
+
+    border-top: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-timeline-container {
+    margin: 80px;
+}
+
+.section-timeline-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+}
+
+.section-timeline-content__box {
+    max-width: 50%;
+    height: 516px;
+    background-color: #fff;
+}
+
+.section-timeline-content__image {
+    width: 100%;
+}
+
+.section-timeline-content__img {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://cdn.shopify.com/s/files/1/0011/6680/3007/files/Step-1_1000x.jpg?v=1522687069');
+    background-position: center;
+    background-size: cover;
+}
+
+.section-timeline-content__info {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.section-timeline-content__top {
+    @include sectiondesc;
+}
+
+.section-timeline-content__title {
+    margin: 20px 0 30px 0;
+    
+    @include sectionTitle;
+}
+
+.section-timeline-content__desc {
+    font-size: 1.4rem;
+    line-height: 23.1px;
+    color: $text-color;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.section-years {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & ul {
+        list-style: none;
+        
+        display: flex;
+    }
+    
+    & li {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    & a {
+        display: inline-block;
+        text-decoration: none;
+        
+        @include sectionHeader;    
+    }
+}
+
+a.section-years__active {
+    font-size: 1.8rem;
+    border-bottom: 4px solid black;
+}
+
+@media screen and (max-width: 1024px) {
+    .section-timeline-container {
+        margin: 80px 50px;
+    }
+
+    .section-years {
+        margin-top: 40px ;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .section-timeline {
+        border-top: none;
+        & .section-timeline-content {
+            position: relative;
+        }
+    }
+
+    .section-timeline-container {
+        margin: 0;
+    }
+
+    .section-timeline-content__box {
+        max-width: 100%;
+        height: 516px;
+    }
+    
+    .section-timeline-content__info {
+        position: absolute;
+        top: -190px;
+        background-color: transparent;
+        text-align: center;
+        color: white;
+    }
+
+    .section-timeline-content__top {
+        color: white;
+    }
+    
+    .section-timeline-content__title {
+        color: white;
+    }
+
+    .section-years {
+        margin-top: 0;
+        justify-content: start;
+
+        background-color: white;
+    }
+}

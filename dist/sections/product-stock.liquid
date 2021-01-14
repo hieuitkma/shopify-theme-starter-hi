@@ -1,0 +1,133 @@
+<div class="section-stock section__main">
+    <div class="section__text">
+        <div class="section__header">BACK IN STOCK</div>
+        <div class="section__title">LA DOUBLE POCHETTE</div>
+    </div>
+
+    <div class="section-stock-product section-product">
+
+        <!-- List product  -->
+        <div class="section-product__list">
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Bordeaux-01_1000x.jpg?v=1570301291 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Bordeaux-03_1000x.jpg?v=1570301291 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LA DOUBLE POCHETTE BURGUNDY</div>
+                    <div class="product__price">$220</div>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Bois-de-Rose-01_1000x.jpg?v=1570300801 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Bois-de-Rose-03_1000x.jpg?v=1570300801 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LA DOUBLE POCHETTE ROSEWOOD</div>
+                    <div class="product__price">$220</div>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Olive-01_1000x.jpg?v=1570301291 1000w07/products/Grand-Sac-Noir-01_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Olive-03_1000x.jpg?v=1570301291 1000w"
+                            alt="">
+                    </a>
+
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LA DOUBLE POCHETTE OLIVE</div>
+                    <div class="product__price">$220</div>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Vert-01_1000x.jpg?v=1570300800 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Double-Pochette-Vert-03_1000x.jpg?v=1570300800 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LA DOUBLE POCHETTE GREEN</div>
+                    <div class="product__price">$220</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__btn">
+        <a href class="btn btn--black">SHOP ALL COLORS</a>
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "product-stock",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "product-stock"
+        }
+    ]
+}
+{% endschema %}

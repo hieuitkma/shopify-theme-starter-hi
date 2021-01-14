@@ -1,0 +1,264 @@
+.section-shop {
+    border-top: 1px solid #333;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-shop-content {
+    text-align: center;
+}
+
+.section-shop .swiper-container {    
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.section-shop .swiper-slide{
+    padding: 0 0 0 80px;
+    width: 100%;
+}
+
+.shop-inner-box {
+    max-width: 980px;
+    max-height: 100%;
+    margin: 0 auto;
+
+    display: flex;
+}
+
+.shop-box-left {
+
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.shop-box-left__img {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.shop-box-right {
+    width: 270px;
+    height: 100%;
+    margin: 0 80px;
+}
+
+// dot
+.shop-box-left__dot {
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    animation-name: zoomDot;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1.5s;
+
+    &:hover {
+        transform: scale(1.5);
+        animation: scaleDot 0.2s linear;
+    }
+
+    &::before {
+        display: block;
+        content: '';
+
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: white;
+
+        transition: all 0.3s linear;
+    }
+}
+
+.shop-box-left__dot-left {
+    position: absolute;
+    left: 17%;
+    top: 42%;
+    
+    &::before {
+        position: absolute;
+        top: 26%;
+        left: 28%;
+    }
+}
+
+.shop-box-left__dot-right {
+    position: absolute;
+    left: 84%;
+    top: 32%;
+
+    &::before {
+        position: absolute;
+        top: 26%;
+        left: 28%;
+    }
+}
+
+.shop-box-left__dot--active {
+    margin: -8px 0 0 -8px;
+    width: calc(34px *1.5);
+    height: calc(34px *1.5);
+
+    &::before {
+        display: block;
+        content: '';
+
+        width: calc(15px * 1.5);
+        height: calc(15px * 1.5);
+        border-radius: 100%;
+        background-color: white;
+    }
+}
+
+.shop-box-left__dot.shop-box-left__dot--active {
+    &:hover {
+        transform: scale(1);
+        animation: unset;
+    }
+}
+
+@keyframes zoomDot {
+    0%, 100%   {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scaleDot {
+    0%  {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+
+
+
+.shop-box-right__text .shop-box-right__title {
+    @include sectiondesc;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.shop-box-right__price {
+    @include sectiondesc;
+}
+
+.shop-box-right__img {
+    margin-top: 34px;
+    width: 250px;
+
+    &:hover {
+        & img:last-child {
+            display: block;
+        }
+        & img:first-child {
+            display: none;
+        }
+    }
+
+    & img {
+        width: 100%;
+
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+.shop-box-right__img-hidden {
+    display: none;
+}
+
+.shop-box-right .btn {
+    display: block;
+    margin: 40px 0 20px 0;
+}
+
+.shop-box-right__dot label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 1px solid #333;
+    margin: 0 4px;
+}
+
+.shop-box-right__dot label.dot__active {
+    background-color: black;
+}
+
+.section-shop-the-look__btn {
+    display: none;
+    margin: 0 auto;
+}   
+
+@media screen and (max-width: 1024px) {
+    .section-shop.section__main {
+        padding: 50px;
+    }
+
+    .section-shop .swiper-container {    
+        max-width: 900px;
+    }
+
+    
+    .section-shop .swiper-button-next,
+    .section-shop .swiper-button-prev {
+        display: none;
+    }
+
+    .shop-inner {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .shop-box-right {
+        display: none;
+    }
+
+    .section-shop .swiper-slide{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .section-shop .swiper-slide {
+        width: 75%;
+    }
+
+    .section-shop__btn {
+        display: inherit;
+        margin-top: 40px;
+    } 
+}
+
+@media screen and (max-width: 800px) {
+    .section-shop.section__main {
+        padding: 50px 30px;
+    }
+
+    .section-shop__btn {
+        display: block;
+
+        width: 100%;
+        margin-top: 0px;
+    }   
+}

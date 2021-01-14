@@ -1,0 +1,126 @@
+<div class="section-new-color section__main">
+    <div class="section__text">
+        <div class="section__header">NEW COLORS</div>
+        <div class="section__title">LE GRAND SAC</div>
+    </div>
+
+    <div class="section-new-color-product section-product">
+        <div class="section-product__list">
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Bleu-01_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Bleu-03_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LE GRAND SAC BLUE</div>
+                    <div class="product__price">$350</div>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Camel-01_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Camel-03_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LEATHER BACKKPACK CAMEL</div>
+                    <div class="product__price">$350</div>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Bordeaux-01_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Bordeaux-03_1000x.jpg?v=1570301293 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LE GRAND SAC BURGUNDY</div>
+                    <div class="product__price">$270</div>
+                </div>
+            </div>
+            <div class="product__item">
+                <div class="product__img">
+                    <a href="#">
+                        <img class="product__img1"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Noir-01_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                        <img class="product__img2"
+                            src="//cdn.shopify.com/s/files/1/0011/6680/3007/products/Grand-Sac-Noir-03_1000x.jpg?v=1570301292 1000w"
+                            alt="">
+                    </a>
+                </div>
+                <div class="product__text">
+                    <div class="product__title">LE GRAND SAC BLACK</div>
+                    <div class="product__price">$350</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "product-color",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "product-color"
+        }
+    ]
+}
+{% endschema %}

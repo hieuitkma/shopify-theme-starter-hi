@@ -1,0 +1,72 @@
+.section-leather-artisans {
+    background-color: #efefef;
+
+    display: flex;
+}
+
+.section-leather-artisans-box {
+    width: 50%;
+}
+
+.section-leather-artisans-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-leather-artisans-text {
+    margin: 0 50px;
+    max-width: 424px;
+}
+
+.section-leather-artisans__header {
+    @include sectiondesc;
+}
+
+.section-leather-artisans__title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @include sectionTitle;
+
+}
+
+.section-leather-artisans__desc {
+    font-size: 1.4rem;
+    color: $text-color-light;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 23.1px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-leather-artisans-right img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 800px) {
+    .section-leather-artisans {
+        flex-direction: column;
+    }
+
+    .section-leather-artisans-box {
+        width: 100%;
+    }
+
+    .section-leather-artisans-left {
+        text-align: center;
+
+        margin-top: 50px;
+    }
+
+    .section-leather-artisans-text {
+        max-width: 500px;
+    }
+}

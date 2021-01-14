@@ -6,8 +6,16 @@
 {% assign hi-06_theme = 'hi-feature--color' %}
 {% endcase %}
 
-<div class="hi-06-content {{hi-06_theme}}">
-    <div class="hi-06-slides">
+{% assign hi-06_reverse = '' %}
+{% case section.settings.hi-06_reverse %}
+{% when 'de' %}
+{% assign hi-06_reverse = '' %}
+{% when 'reverse' %}
+{% assign hi-06_reverse = 'hi-feature--reverse' %}
+{% endcase %}
+
+<div class="hi-06-content {{hi-06_theme}} {{hi-06_reverse}}">
+    <div class="hi-06-slides test">
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 {% for block in section.blocks %}
@@ -25,7 +33,7 @@
     </div>
 
     <div class="hi-06__main">
-        <div class="hi-06__header">{{section.settings.hi-06_header }}</div>
+        <div class="hi-06__header" style="color: {{section.settings.mau }}; font-family: {{section.settings.heading_font }};">{{section.settings.hi-06_header }}</div>
         <div class="hi-06__desc">{{section.settings.hi-06_desc }}</div>
         <div class="hi__btn">
             <a href="#" class="hi-btn hi__btn--primary">EXPLORE</a>
@@ -37,29 +45,21 @@
 {% schema %}
 {
     "name": "hi-feature-06",
-    
+    "class": "testthoi",
     "settings": [
-        {
-            "id": "hi-06_header",
-            "type": "text",
-            "label": "Header",
-            "default": "EXPLORE OUR OUTSTANDING FEATURES"
-        },
+    {
+        "type": "collection",
+        "id": "feature_collection",
+        "label": "Featured collection"
+     },
         {
             "type": "select",
-            "id": "vertical_alignment",
+            "id": "hi-06_reverse",
             "options": [
-               { "value": "top", "label": "Top"},
-               { "value": "middle", "label": "Middle"},
-               { "value": "bottom", "label": "Bottom"}
+                { "value": "de", "label": "Default"},
+                { "value": "reverse", "label": "Row-reverse"}
             ],
-            "label": "Vertical alignment"
-         },
-        {
-            "id": "hi-06_desc",
-            "type": "textarea",
-            "label": "Desc",
-            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+            "label": "Reverse"
         },
         {
             "type": "radio",
@@ -76,12 +76,31 @@
                 }
             ],
             "default": "default"
+        },
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "type": "color",
+            "id": "mau",
+            "label": "Color",
+            "default": "#3d4246"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
         }
     ],
     "blocks": [
         {
             "type": "text",
             "name": "hi-feature-06",
+            "limit": 5,
             "settings": [
                 {
                     "id": "hi-06__name",

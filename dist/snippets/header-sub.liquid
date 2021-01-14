@@ -1,0 +1,41 @@
+{% assign subMenuLinks = "CATEGORIES, All Products, Briefcases, Handbags, Backpacks, Pochttes, MODELS, Leather Backpacks, La Double Pochette, Le Grand Sac, Le Petit Sac, Le Nouveau Cartble, Le Petit Violette, POPULER COLORS, Red, Camel, Blue, Black, Rosewood, Burgundy" | split: ',' %}
+
+{% capture subMenuItem1 %}
+<ul class="sub--menu__list">
+    {% for item in subMenuLinks offset: 0 limit: 6 %}
+        <li class="sub--menu__item">
+            <a href="#" class="sub--menu__link">{{ item }}</a>
+        </li>
+    {% endfor %}
+</ul> 
+{% endcapture %}
+
+{% capture subMenuItem2 %}
+<ul class="sub--menu__list">
+    {% for item in subMenuLinks offset: 6 limit: 7 %}
+        <li class="sub--menu__item">
+            <a href="#" class="sub--menu__link">{{ item }}</a>
+        </li>
+    {% endfor %}
+</ul> 
+{% endcapture %}
+
+{% capture subMenuItem3 %}
+<ul class="sub--menu__list">
+    {% for item in subMenuLinks offset: 13 %}
+        <li class="sub--menu__item">
+            <a href="#" class="sub--menu__link">{{ item }}</a>
+        </li>
+    {% endfor %}
+</ul> 
+{% endcapture %}
+
+<div class="sub--menu">
+    {{ subMenuItem1 }}
+</div>
+<div class="sub--menu">
+    {{subMenuItem2}}
+</div>
+<div class="sub--menu">
+    {{subMenuItem3}}
+</div>

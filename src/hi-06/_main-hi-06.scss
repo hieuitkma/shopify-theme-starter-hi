@@ -67,7 +67,6 @@
 }
 
 .hi-06__header{
-    color: #3d4246;
     letter-spacing: 2px;
     font-size: 20px;
 }
@@ -115,6 +114,10 @@
     color: white;
 }
 
+.hi-06-content.hi-feature--reverse {
+    flex-direction: row-reverse;
+}
+
 .hi__btn {
     margin-top: 50px;
 }
@@ -141,21 +144,6 @@
         color: white;
     }
 }
-
-
-// .hi-06-content-bottom {
-//     margin-top: 100px;
-//     background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.shopify.com/s/files/1/0335/3526/2856/t/1/assets/1591863412208.jpg?v=1055100531130285617);
-// }
-
-// .hi-06-content--reverse.hi-06-content {
-//     flex-direction: row-reverse;
-// }
-
-// .hi-06-content--reverse .hi-06__header ,
-// .hi-06-content--reverse .hi-06__desc {
-//     color: white;
-// };
 
 @media only screen and (max-width: 999px) {
     .hi-06-slides {

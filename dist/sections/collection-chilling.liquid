@@ -1,0 +1,63 @@
+<div class="section-collection-list section-collection-list__img">
+    <div class="section-collection-list__anh"></div>
+    <div class="section-collection-list-box">
+        <div class="section-collection-list__text">
+            <div class="section-collection-list__header">CHILLING WITH</div>
+            <div class="section-collection-list__title">LA DOUBLE POCHETTE</div>
+        </div>
+        <div class="section-collection-list__btn">
+            <a href="#" class="btn btn--white">DISCORVER</a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Collection chilling",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "Collection chilling"
+        }
+    ]
+}
+{% endschema %}

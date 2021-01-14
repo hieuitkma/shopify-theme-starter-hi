@@ -1,0 +1,93 @@
+<div class="section-timeline">
+    <div class="section-timeline-container">
+        <div class="section-timeline-content">
+            <div class="section-timeline-content__box section-timeline-content__image">
+                <div class="section-timeline-content__img"></div>
+            </div>
+            <div class="section-timeline-content__box section-timeline-content__info">
+                <div class="section-timeline-content__top">FIRST PRODUCT</div>
+                <div class="section-timeline-content__title">LE PETIT CARTABLE</div>
+                <div class="section-timeline-content__desc">Leo et Violette's story is ours. We are Léo
+                    Dominguez &
+                    Violette
+                    Polchi. Two Parisian lovers sharing our life for more than 8 years. Ever since we met, we
+                    always
+                    had the dream to develop a project together. By creating Le petit cartable in January 2013,
+                    we
+                    started to realize this dream. Our first Kickstarter campaign is launched!</div>
+            </div>
+        </div>
+
+        <!-- list year  -->
+        <div class="section-years">
+            <ul>
+                <li>
+                    <a class="section-years__active" href="#">2013</a>
+                </li>
+                <li>
+                    <a href="#">2014</a>
+                </li>
+                <li>
+                    <a href="#">2015</a>
+                </li>
+                <li>
+                    <a href="#">2016</a>
+                </li>
+                <li>
+                    <a href="#">2017</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "feature-timeline",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "feature-timeline"
+        }
+    ]
+}
+{% endschema %}

@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
   <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
 
+
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
   {%- assign header_font = settings.type_header_font -%}
@@ -25,6 +26,10 @@
   <link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
   <link rel="preload" href="{{ 'lazysizes.js' | asset_url }}" as="script">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
   {%- if canonical_url != blank  -%}
     <link rel="canonical" href="{{ canonical_url }}">
@@ -168,7 +173,7 @@
     }
   </script>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
   {{ content_for_header }}
 </head>
@@ -201,5 +206,7 @@
     <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
     <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
   </ul>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

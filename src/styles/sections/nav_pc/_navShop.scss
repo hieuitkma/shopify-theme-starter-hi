@@ -1,0 +1,104 @@
+/* nav mega menu desktop*/
+
+.nav-left__item--dropdown:hover .mega--menu {
+    display: block;
+}
+
+.mega--menu {
+    display: none;
+    opacity: 1;
+
+    position: absolute;
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+    height: 340px;
+
+    background-color: #fff;
+    border-top: 1px solid #333;
+
+    animation: fadeIn ease-in 0.2s;
+}
+
+
+.col-12 {
+    display: flex;
+
+    max-width: 1400px;
+    margin: 50px auto;
+}
+
+.col-6 {
+    display: flex;
+    
+    width: 50%;
+}
+
+.sub--menu {
+    width: 33.3333%;
+}
+
+.sub--menu__item {
+    list-style: none;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.sub--menu__link {
+    color: $color-black;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.sub--menu__box {
+    display: flex;
+    
+}
+
+.sub--box__item {
+    width: 50%;
+    max-height:85%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    &:hover img{
+        transform: scale(1.3);
+    }
+}
+
+.sub--box__item:nth-child(1) {
+    margin: 0 15px 0 0;
+}
+
+.sub--box__item:nth-child(2) {
+    margin: 0 0 0 15px;
+} 
+
+.sub--box__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sub--menu__box img {
+    width: 100%;
+    height: 100%;
+    transition: all 10s;
+}
+
+.sub--box__text {
+    line-height: 20px;
+    text-align: center;
+}
+
+.sub--box__brand {
+    font-size: 1.2rem;
+    letter-spacing: 2.4px;
+    margin: 20px 0 6px 0;
+}
+
+.sub--box__title {
+    font-size: 1.1rem;
+    letter-spacing: 2.4px;
+}

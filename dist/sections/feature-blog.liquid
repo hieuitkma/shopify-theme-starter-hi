@@ -1,0 +1,120 @@
+<div class="section-blog section__main">
+    <div class="section__text">
+        <div class="section__header">NEWS</div>
+        <div class="section__title">FROM THE BLOG</div>
+    </div>
+
+    <div class="section-blog-container">
+        <div class="section-blog-content">
+            <div class="section-blog-box">
+                <div class="section-blog__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0011/6680/3007/articles/11_400x.jpg?v=1522410170"
+                        alt="">
+                </div>
+                <div class="section-blog__text">
+                    <div class="section-blog__header">INTERVIEW</div>
+                    <div class="section-blog__title">LEO ET VIOLETTE FOUNDERS INTERVIEW
+                    </div>
+                    <div class="section-blog__desc">Leo et Violette's story is ours. We
+                        are
+                        Léo Dominguez & Violette Polchi. Two Parisian lovers sharing our life
+                        for
+                        more than 8 years. </div>
+                    <div class="section__btn-secondary">
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section-blog-box">
+                <div class="section-blog__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0011/6680/3007/articles/7_400x.jpg?v=1522409295"
+                        alt="">
+                </div>
+                <div class="section-blog__text">
+                    <div class="section-blog__header">LAUNCH</div>
+                    <div class="section-blog__title">NEW LE GRAND SAC</div>
+                    <div class="section-blog__desc">Le Grand sac, elegant by its design
+                        and
+                        practical by its size, is the perfect everyday bag.</div>
+                    <div class="section__btn-secondary">
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-blog-box">
+                <div class="section-blog__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0011/6680/3007/articles/article-1_400x.jpg?v=1522281314"
+                        alt="">
+                </div>
+                <div class="section-blog__text">
+                    <div class="section-blog__header">PRODUCT</div>
+                    <div class="section-blog__title">TAKE CARE OF LEATHER</div>
+                    <div class="section-blog__desc">Leather is a living and natural
+                        material.
+                        A well-treated leather can become even more beautiful and unique over
+                        time.
+                    </div>
+                    <div class="section__btn-secondary">
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section__btn">
+        <a href class="btn btn--black">DISCOVER ALL OUR STORIES</a>
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "feature-blog",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "feature-blog"
+        }
+    ]
+}
+{% endschema %}

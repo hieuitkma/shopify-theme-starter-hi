@@ -1,0 +1,70 @@
+<div class="section-leather-artisans">
+    <div class="section-leather-artisans-left section-leather-artisans-box">
+        <div class="section-leather-artisans-text">
+            <div class="section-leather-artisans__header">THE FACTORY</div>
+            <div class="section-leather-artisans__title">LEATHER ARTISANS</div>
+            <div class="section-leather-artisans__desc">Our collections are made in a workshop located in Italy,
+                near Naples. This factory- specialized in luxury leather goods- was created in the early 1980's
+                by
+                Dino Levorino, a well known artisan in Italy for his know-how.</div>
+            <div class="section__btn-secondary">
+                <a href="#">Read more</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-leather-artisans-right section-leather-artisans-box">
+        <img src="https://cdn.shopify.com/s/files/1/0011/6680/3007/files/leather_464e1cc8-da0b-496f-9e5e-0701b53131d1_1200x.jpg?v=1523440185%201200w"
+            alt="">
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "feature-leather-artisans",
+    "settings": [
+        {
+            "id": "hi-06_header",
+            "type": "text",
+            "label": "Header",
+            "default": "EXPLORE OUR OUTSTANDING FEATURES"
+        },
+        {
+            "id": "hi-06_desc",
+            "type": "textarea",
+            "label": "Desc",
+            "default": "We create category leading brand experiences that have meaning and add a value for our clients."
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "1 feature collection",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "hi-2__img2",
+                    "label": "Image"
+                },
+                {
+                    "id": "hi-2__title",
+                    "type": "text",
+                    "label": "Title"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "hi-feature",
+            "name": "feature-leather-artisans"
+        }
+    ]
+}
+{% endschema %}

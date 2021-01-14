@@ -1,0 +1,88 @@
+.content {
+    background-color: #efefef;
+}
+
+.section-feature-collection {
+    background-color: #efefef;
+}
+
+.section__gender{
+    text-align: center;
+    
+    @include sectionTitle;
+}
+
+.section__gender a {
+    color: #1c1b1b;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.section__gender--active {
+    position: relative;
+    &::after {
+        display: inline-block;
+        content: '';
+
+        height: 2px;
+        width: 100%;
+        background-color: black;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        transition: all .5s linear;
+    }
+
+    &:hover::after {
+        width: 0;
+    }
+}
+
+// slide
+.product__img {
+    & a {
+        display: flex;
+        justify-content: center;
+    }
+    &:hover {  
+        & .product__img2{
+            display: block;
+        }
+        & .product__img1{
+            display: none;
+        }
+    }
+}
+
+.slide-content img {
+    width: 80%;
+}
+
+.product__img2 {
+    display: none;
+}
+
+.product__text {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.product__title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @include sectiondesc;
+}
+
+.product__price {
+    @include sectionHeader;
+}
+
+.section__btn {
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: center;
+}
